@@ -7,6 +7,13 @@
     <%= yield(:head) %>
   </head>
   <body>
+	<div id='header'>
+		[ 
+		<%= link_to 'home', '/' %> | 
+		<%= link_to 'posts', posts_path %> | 
+		
+		]
+	</div>
     <div id="container">
       <%- flash.each do |name, msg| -%>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
