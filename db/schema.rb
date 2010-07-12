@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20100712135405) do
     t.string   "username"
     t.string   "email"
     t.string   "goliardic_name"
+    t.text     "about_you"
     t.string   "password_hash"
     t.string   "password_salt"
     t.datetime "created_at"

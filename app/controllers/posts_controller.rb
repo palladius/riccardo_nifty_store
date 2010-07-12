@@ -12,9 +12,11 @@ class PostsController < ApplicationController
   end
   
   def create
+    params[:post][:user_id] = current_user.id
+    params[:post][:post_id] = -1
     @post = Post.new(params[:post])
     if @post.save
-      flash[:notice] = "Successfully created post."
+      flash[:notice] = "Successfully created post (DEBUG: #{params.inspect})."
       redirect_to @post
     else
       render :action => 'new'

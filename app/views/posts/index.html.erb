@@ -11,7 +11,7 @@
     <tr>
       <td><%=h post.name %></td>
       <td><%=h post.content %></td>
-      <td><%=h post.user_id %></td>
+      <td><%=link_to( post.user,post.user) rescue '-' %></td>
       <td><%=h post.post_id %></td>
       <td><%= link_to "Show", post %></td>
       <td><%= link_to "Edit", edit_post_path(post) %></td>

@@ -10,9 +10,18 @@
 	<div id='header'>
 		[ 
 		<%= link_to 'home', '/' %> | 
-		<%= link_to 'posts', posts_path %> | 
-		
+		<%= link_to 'posts', posts_path %> 
+		<%#= link_to 'comments', comments_path %> |
 		]
+	</div>
+	<div id='auth'>
+	   <% if logged_in? %>
+	     Welcome <b class='user'><%= link_to current_user,current_user %></b> (aka <i><%= current_user.goliardic_name %></i>)! Not you?
+	     <%= link_to "Log out", logout_path %>
+	   <% else %>
+	     <%= link_to "Sign up", signup_path %> or
+	     <%= link_to "log in", login_path %>.
+	   <% end %>
 	</div>
     <div id="container">
       <%- flash.each do |name, msg| -%>
