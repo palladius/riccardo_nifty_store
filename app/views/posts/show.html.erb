@@ -1,17 +1,12 @@
-<% title "Post" %>
-
-<p>
-  <strong>Name:</strong>
-  <%=h @post.name %>
-</p>
+<% title ( @post.name) %>
+	<div align='right'>
+	  by <strong><%= @post.user %></strong>
+	</div>
 <p>
   <strong>Content:</strong>
   <%=h @post.content %>
 </p>
-<p>
-  <strong>User:</strong>
-  <%=h @post.user_id %>
-</p>
+
 <p>
   <strong>Post:</strong>
   <%=h @post.post_id %>

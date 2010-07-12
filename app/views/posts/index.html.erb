@@ -3,14 +3,12 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Content</th>
     <th>User</th>
     <th>Post</th>
   </tr>
   <% for post in @posts %>
     <tr>
       <td><%=h post.name %></td>
-      <td><%=h post.content %></td>
       <td><%=link_to( post.user,post.user) rescue '-' %></td>
       <td><%=h post.post_id %></td>
       <td><%= link_to "Show", post %></td>
