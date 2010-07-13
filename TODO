@@ -1,0 +1,26 @@
+TODO
+
+- metti ACL con utenti , capabilities e tabella mediana di merge.
+
+tipo
+
+USERS:
+  1: root
+  2: rcarlesso
+  3: fmattei
+  4: coglione
+ACLS:
+  na: 1 1
+  na: 2 2
+  na: 3 2
+  na: 4 4
+CAPABILITIES:
+  1: root
+  2: admin
+  3: god
+  4: user
+  5: write_clients
+  6: review_articles
+  7: publisher
+  8: editor
+
