@@ -8,5 +8,19 @@
     <%= f.label :content %><br />
     <%= f.text_area :content %>
   </p>
+  <p>
+    Father Post ID<br />
+    <%= f.text_field :post_id %>
+  </p>
+  <p>
+    <%= f.label :publish_start %><br />
+    <%= f.text_field :publish_start %>
+  </p>
+  <p>
+    <%= f.label :publish_end %><br />
+    <%= f.text_field :publish_end %>
+  </p>
+
+
   <p><%= f.submit %></p>
 <% end %>

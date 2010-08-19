@@ -2,14 +2,15 @@
 
 <p>
   <strong>Name:</strong>
-  <%=h @user.name %>
+  <%=link_to @user,@user %>
 </p>
 <p>
   <strong>Goliardic name:</strong>
-  <%=h @user.goliardic_name %>
+  <%=goliardic_link( @user) %>
 </p>
 <p>
   <strong>Posts:</strong>
+  <%=@user.posts.map{|p| link_to(p,p) }.join(', ') %>
   <%#=#h @user.user_id %>
 </p>
 
