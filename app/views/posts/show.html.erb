@@ -12,7 +12,7 @@
 	<p>
 	  <strong>Post Id:</strong>
 	  <%#=h @post.post_id %> 
-	  <%=@post.post ? link_to( @post.post , @post.post) : 'niuno' %>
+	  <%= father_post_link(@post) %>
 	  <strong>Publish date:</strong>
 	  <%=h @post.publish_start || '?!?' %> ..
 	    <%=h @post.publish_end   || '?!?' %> 

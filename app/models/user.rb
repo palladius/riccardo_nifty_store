@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   # AUTOMATICO DA QUI IN GIU
   
   # new columns need to be added here to be writable through mass assignment
-  attr_accessible :username, :email, :password, :password_confirmation
+  attr_accessible :username, :email, :password, :password_confirmation, :about_you, :goliardic_name
   
   attr_accessor :password
   before_save :prepare_password

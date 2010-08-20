@@ -10,7 +10,7 @@
     <tr>
       <td><%=h post.name %></td>
       <td><%=link_to( post.user,post.user) rescue '-' %></td>
-      <td><%=h post.post_id %></td>
+      <td><%= father_post_link(post) %></td>
       <td><%= link_to "Show", post %></td>
       <td><%= link_to "Edit", edit_post_path(post) %></td>
       <td><%= link_to "Destroy", post, :confirm => 'Are you sure?', :method => :delete %></td>

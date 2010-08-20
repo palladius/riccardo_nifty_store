@@ -13,6 +13,11 @@
   <%=@user.posts.map{|p| link_to(p,p) }.join(', ') %>
   <%#=#h @user.user_id %>
 </p>
+<p>
+  <strong>About:</strong>
+  <%= h @user.about_you %>
+  <%#=#h @user.user_id %>
+</p>
 
 <p>
   <%= link_to "Edit YOURSELF", edit_user_path(@user) %> |
