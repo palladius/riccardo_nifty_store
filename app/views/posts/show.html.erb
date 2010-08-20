@@ -10,12 +10,16 @@
 <div class='post_footer' >
 	<small>
 	<p>
-	  <strong>Post Id:</strong>
-	  <%#=h @post.post_id %> 
-	  <%= father_post_link(@post) %>
+	  <strong>Father:</strong>
+	  	<%= father_post_link(@post) %>
+	</p>
+	<p>
+	  <strong>Sons:</strong>
+	  	<%= sons_post_link(@post).join(', ') %>
+	</p>
+	<p>
 	  <strong>Publish date:</strong>
-	  <%=h @post.publish_start || '?!?' %> ..
-	    <%=h @post.publish_end   || '?!?' %> 
+	    <%=h @post.publish_start || '?!?' %> .. <%=h @post.publish_end   || '?!?' %> 
 	</p>
 </div>
 <p>

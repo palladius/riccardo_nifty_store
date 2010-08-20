@@ -4,18 +4,22 @@
   <tr>
     <th>Name</th>
     <th>User</th>
-    <th>Post</th>
+    <th>Father</th>
+    <th>Sons</th>
+    <th>Actions</th>
   </tr>
   <% for post in @posts %>
     <tr>
-      <td><%=h post.name %></td>
-      <td><%=link_to( post.user,post.user) rescue '-' %></td>
+      <td><b><%=link_to post, post %></b></td>
+      <td><%=user_link( post.user) rescue '-' %></td>
       <td><%= father_post_link(post) %></td>
-      <td><%= link_to "Show", post %></td>
-      <td><%= link_to "Edit", edit_post_path(post) %></td>
-      <td><%= link_to "Destroy", post, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= sons_post_link(post).size %></td>
+      <td>
+		<%= icon_link_to 'edit', "", edit_post_path(post) %>
+        <%= icon_link_to 'delete', "", post, :confirm => 'Are you sure?', :method => :delete %>
+	  </td>
     </tr>
   <% end %>
 </table>
 
-<p><%= link_to "New Post", new_post_path %></p>
+<p><%= icon_link_to 'new', "New Post", new_post_path %></p>

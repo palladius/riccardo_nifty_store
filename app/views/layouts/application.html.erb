@@ -9,18 +9,18 @@
   <body>
 	<div id='header'>
 		[ 
-		<%= link_to 'home', '/' %> | 
-		<%= link_to 'posts', posts_path %> 
-		<%#= link_to 'comments', comments_path %> |
+		<%= icon_link_to 'home', 'home', '/' %> | 
+		<%= icon_link_to 'posts','posts', posts_path %> 
 		]
 	</div>
-	<div id='auth'>
+	<div id='auth' align='right' >
 	   <% if logged_in? %>
-	     Welcome <b class='user'><%= link_to current_user,current_user %></b> (aka <i><%= current_user.goliardic_name %></i>)! Not you?
-	     <%= link_to "Log out", logout_path %>
-	   <% else %>
-	     <%= link_to "Sign up", signup_path %> or
-	     <%= link_to "log in", login_path %>.
+	     Welcome <b class='user'><%= icon_link_to 'user', current_user,current_user %></b> (aka <i><%= current_user.goliardic_name %></i>)! Not you?
+	     <%= icon_link_to 'logout', "Log out", logout_path %>
+	   <% else %>         
+		 Not logged in?!?
+	     <%= icon_link_to 'signup', "Sign up", signup_path %> or
+	     <%= icon_link_to 'login', "log in", login_path %>.
 	   <% end %>
 	</div>
     <div id="container">

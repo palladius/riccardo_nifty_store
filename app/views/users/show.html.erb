@@ -1,9 +1,6 @@
-<% title "User ##{4242}" %>
+<% title @user.name.capitalize %>
 
-<p>
-  <strong>Name:</strong>
-  <%=link_to @user,@user %>
-</p>
+
 <p>
   <strong>Goliardic name:</strong>
   <%=goliardic_link( @user) %>
@@ -20,7 +17,7 @@
 </p>
 
 <p>
-  <%= link_to "Edit YOURSELF", edit_user_path(@user) %> |
-  <%= link_to "Destroy YOURSELF", @user, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= icon_link_to 'edit',   "Edit YOURSELF", edit_user_path(@user) %> |
+  <%= icon_link_to 'delete', "Destroy YOURSELF", @user, :confirm => 'Are you sure?', :method => :delete %> |
   <%#= link_to "View All", users_path %>
 </p>
