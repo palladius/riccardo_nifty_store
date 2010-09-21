@@ -1,5 +1,10 @@
+SYNOPSIS
+
+This is a Goldy version of RoR 2.3.5 from Riccardo Carlesso
+
 TODO
 
+- baco in inserimento post, sigh!
 - metti ACL con utenti , capabilities e tabella mediana di merge.
 
 tipo
