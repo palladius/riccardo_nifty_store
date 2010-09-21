@@ -1,0 +1,7 @@
+%tr{:id => "ajax_post_#{ajax_post.id}"}
+  %td= h ajax_post.subject
+  %td= h ajax_post.body
+  %td= h ajax_post.published_at
+  %td= link_to 'Edit', edit_ajax_post_path(ajax_post), :class => "dialog_link"
+  %td= link_to 'Remove', ajax_post, :confirm => 'Are you sure?', :method => :delete
+

@@ -1,0 +1,11 @@
+%table
+  %thead
+    %tr
+      %th Subject
+      %th Body
+      %th Published at
+  %tbody{:id => "ajax_posts" }
+    = render :partial => "ajax_post", :collection => ajax_posts
+
+%p= link_to "New Ajax Post", new_ajax_post_path, :class => "button dialog_link"
+

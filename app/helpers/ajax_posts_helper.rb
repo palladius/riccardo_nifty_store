@@ -1,0 +1,2 @@
+module AjaxPostsHelper
+end

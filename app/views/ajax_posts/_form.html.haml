@@ -1,0 +1,15 @@
+#ajax_post_dialog
+  - form_for @ajax_post do |f|
+    = f.error_messages
+    %p
+      = f.label :subject
+      = f.text_field :subject, :class => "text"
+    %p
+      = f.label :body
+      = f.text_area :body, :class => "text"
+    %p
+      = f.label :published_at
+      = f.datetime_select :published_at, :class => "text"
+    %p
+      = f.submit "#{f.object.new_record? ? "Create" : "Update"} Ajax_post", :class => "button dialog"
+      

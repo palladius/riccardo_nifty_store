@@ -1,0 +1,49 @@
+result = render :partial => "form"
+page << <<-JS
+
+var idialog = '#ajax_post_dialog';
+var iform = idialog + ' > form';
+var ierror = '#error_dialog';
+
+
+
+$('#container').append('#{ escape_javascript result}');
+
+var options = {
+	dataType: 'script', 
+	success: function() { 
+	  if ($(ierror).html() == null)
+	  {
+	    $(idialog).dialog("close");
+	    $(idialog).remove();
+	  }  
+	}
+};
+
+
+$(iform).ajaxForm(options);
+
+$(idialog).dialog({
+	autoOpen: true,
+	width: 500,
+	title: '#{params[:action].capitalize} Ajax_post',
+	closeOnEscape: true,
+	buttons: {
+		"Ok": function() {
+			  $(iform).submit();
+			}, 
+		"Cancel": function() {
+			$(this).dialog("close");
+			} 
+		},
+	close: function() {
+		$(this).remove(); 
+	  
+	}
+		
+});
+
+
+$('.button.dialog').hide();
+
+JS

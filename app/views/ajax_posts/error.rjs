@@ -1,0 +1,13 @@
+result = render :partial => "error"
+page << <<-JS
+$('#container').append('#{ escape_javascript result}');
+
+$('#error_dialog').dialog({
+	autoOpen: true,
+	width: 500,
+	close: function() {
+	  $(this).remove();
+	}
+});
+
+JS
