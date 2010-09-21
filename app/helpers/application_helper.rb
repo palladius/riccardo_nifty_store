@@ -2,7 +2,7 @@
 module ApplicationHelper
   
   def icon_link_to(icon_name,link_name,link_url, opts={})
-    img = image_tag("icons/#{icon_name}.png", :height => 15 ) 
+    img = image_tag("#{icon_name}.png", :height => 15 ) 
     link_to(img + ' ' + link_name.to_s,link_url, opts)
   end
   
