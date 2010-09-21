@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100824154017) do
+ActiveRecord::Schema.define(:version => 20100921151751) do
 
   create_table "ajax_posts", :force => true do |t|
     t.string   "subject"
@@ -29,6 +29,14 @@ ActiveRecord::Schema.define(:version => 20100824154017) do
     t.date     "publish_start"
     t.date     "publish_end"
     t.boolean  "active",        :default => true
+  end
+
+  create_table "roles", :force => true do |t|
+    t.string   "name"
+    t.text     "notes"
+    t.string   "tags"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|

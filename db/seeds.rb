@@ -5,3 +5,20 @@
 #   
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Major.create(:name => 'Daley', :city => cities.first)
+
+SEED_VER = '0.9'
+
+ROLES = %w{ 
+ root
+ admin           
+ god             
+ user            
+ write_clients   
+ review_articles 
+ publisher       
+ editor       
+}   
+  
+ROLES.each{|role|
+  Role.create(:name => role , :notes => "Introduced by rake db:seed (v.#{SEED_VER})", :tags => 'role' )
+}

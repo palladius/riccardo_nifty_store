@@ -1,6 +1,8 @@
 SYNOPSIS
 
 This is a Goldy version of RoR 2.3.5 from Riccardo Carlesso
+Per ora lo tengo nel mio Dropbox, come proof of concept.
+In futuro si vedra'!
 
 TODO
 
@@ -19,7 +21,7 @@ ACLS:
   na: 2 2
   na: 3 2
   na: 4 4
-CAPABILITIES:
+ROLES:
   1: root
   2: admin
   3: god

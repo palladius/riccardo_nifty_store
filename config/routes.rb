@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :roles
+
   map.resources :ajax_posts
 
   map.signup 'signup', :controller => 'users', :action => 'new'
