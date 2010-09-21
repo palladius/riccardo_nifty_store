@@ -38,4 +38,8 @@ class UsersController < ApplicationController
   #    flash[:notice] = "Successfully destroyed post."
   #    redirect_to posts_url
   #  end
+  
+  def index
+    @users = User.all
+  end
 end
