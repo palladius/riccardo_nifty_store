@@ -15,7 +15,6 @@ USERS:
   1: root
   2: rcarlesso
   3: fmattei
-  4: coglione
 ACLS:
   na: 1 1
   na: 2 2
@@ -26,8 +25,12 @@ ROLES:
   2: admin
   3: god
   4: user
-  5: write_clients
+  5: write_posts
   6: review_articles
   7: publisher
   8: editor
+  9: write_others_posts
 
+= Credits
+ Author: Riccardo Carlesso
+ Nifty stuff: thanks to Ryan Bates and DHH to make this fun possible!
