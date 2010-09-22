@@ -10,5 +10,9 @@ module PostsHelper
     sons.map{|son| icon_link_to('post',son,son) }
   end
   
+  def post_title(post)
+    title = link_to(post,post)
+    post.father? ? "<b class='post' >#{title}</b>" : "<i class='post' >#{title}</i>"
+  end
   
 end

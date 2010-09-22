@@ -2,10 +2,13 @@ module UsersHelper
   
   def goliardic_link(user, short = false, opts = {})
     #link_to(user.goliardic_name,"http://www.goliardia.it/utente.php?nomeutente=#{user.goliardic_name }")
-    icon_link_to('feluca', user.goliardic_name, 
+    short ? # short
+      icon_link_to('feluca', nil, 
       "http://www.goliardia.it/utente.php?nomeutente=#{user.goliardic_name }", opts
-    )
-    
+      ) : # long:
+      icon_link_to('feluca', user.goliardic_name, 
+      "http://www.goliardia.it/utente.php?nomeutente=#{user.goliardic_name }", opts
+      )    
   end
   
   def user_link(user)

@@ -8,4 +8,16 @@ class Post < ActiveRecord::Base
   def to_s
     self.name.capitalize
   end
+  
+  def name_and_user
+    "#{to_s} (#{user})"
+  end
+  
+  def father?
+    self.post == nil
+  end
+  
+  def title
+    to_s
+  end
 end

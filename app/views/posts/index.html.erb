@@ -2,17 +2,17 @@
 
 <table>
   <tr>
+    <th>Father</th>
     <th>Name</th>
     <th>User</th>
-    <th>Father</th>
     <th>Sons</th>
     <th>Actions</th>
   </tr>
   <% for post in @posts %>
     <tr>
-      <td><b><%=link_to post, post %></b></td>
-      <td><%=user_link( post.user) rescue '-' %></td>
       <td><%= father_post_link(post) %></td>
+      <td><%=post_title( post) %></td>
+      <td class='user' ><%=user_link( post.user) rescue '-' %></td>
       <td><%= sons_post_link(post).size %></td>
       <td>
 		<%= icon_link_to 'edit', "", edit_post_path(post) %>

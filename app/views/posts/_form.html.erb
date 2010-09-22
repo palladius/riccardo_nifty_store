@@ -1,3 +1,10 @@
+<%
+	@posts = Post.find_all_by_active_and_user_id(true, @current_user.id ) rescue Post.find_all_by_active(true)
+	@posts = @posts - [ @post ] # remove myself! Cool!
+%>
+<h1>
+ <%= @current_user rescue 'curruser' %>
+</h1>
 <% form_for @post do |f| %>
   <%= f.error_messages %>
   <p>
@@ -10,7 +17,8 @@
   </p>
   <p>
     Father Post ID<br />
-    <%= f.text_field :post_id %>
+    <%#= f.text_field :post_id %>
+    <%= f.collection_select :post_id, @posts, :id, :name_and_user %>
   </p>
   <p>
     <%= f.label :publish_start %><br />
