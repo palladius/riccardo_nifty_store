@@ -4,7 +4,17 @@ This is a Goldy version of RoR 2.3.5 from Riccardo Carlesso
 Per ora lo tengo nel mio Dropbox, come proof of concept.
 In futuro si vedra'!
 
-TODO
+== INSTALL ==
+
+# first time
+ git clone git@github.com:palladius/riccardo_nifty_store.git
+ rake db:migrate
+
+# Successive push/pulls
+ git push
+ git pull  origin master
+
+''TODO''
 
 - metti ACL con utenti , capabilities e tabella mediana di merge.
 
