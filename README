@@ -6,10 +6,13 @@ In futuro si vedra'!
 
 TODO
 
-- baco in inserimento post, sigh!
 - metti ACL con utenti , capabilities e tabella mediana di merge.
 
-tipo
+BUGS
+
+(SOLVED) Bug in insert of posts.
+
+= SAMPLE TABLE =
 
 USERS:
   1: root
