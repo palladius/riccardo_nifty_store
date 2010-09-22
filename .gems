@@ -1,7 +1,7 @@
 
-hpricot --version '>= 0.2' --source code.whytheluckystiff.net
-dm-core --version 0.9.10
+#hpricot --version '>= 0.2' --source code.whytheluckystiff.net
+#dm-core --version 0.9.10
 
- mislav-will_paginate  
+mislav-will_paginate  
 nifty-generators
 nifty_scaffold
