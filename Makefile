@@ -15,5 +15,6 @@ tests:
 build-docker:
 	docker build -t $(APPNAME) .
 
+# run on port 3001 in env:dev
 run-docker-local: build-docker
-		docker run -it -p 0.0.0.0:3001:3000 $(APPNAME) bash
+		docker run -it -p 0.0.0.0:3001:3000 $(APPNAME) script/server

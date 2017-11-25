@@ -14,6 +14,7 @@ class ApplicationController < ActionController::Base
     @app_version = Configuration.app_version #{}"application_controller.changeme.42"
     @app_git_version = Configuration.git_version # '12fea53'
     @app_commit_repo = Configuration.app_commit_repo
+    @rails_env = RAILS_ENV
   end
   #require MySite::Application
 

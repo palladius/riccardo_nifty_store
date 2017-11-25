@@ -40,7 +40,7 @@
     	App: <b><%= @app_name rescue $! %></b> - 
     	v.<b><%= @app_version rescue $! %></b> 
     	<br/>
-    	<small>
+    	<small>Env: <b><%= @rails_env %></b>
         GitV.<a href='<%= @app_commit_repo %>' ><%= @app_git_version rescue $! %>
           </a>
         </small>
