@@ -36,5 +36,15 @@
       
       <%= yield %>
     </div>
+    <div class="footer" align='center' >
+    	App: <b><%= @app_name rescue $! %></b> - 
+    	v.<b><%= @app_version rescue $! %></b> 
+    	<br/>
+    	<small>
+        GitV.<a href='<%= @app_commit_repo %>' ><%= @app_git_version rescue $! %>
+          </a>
+        </small>
+      <!-- eg try: https://github.com/palladius/riccardo_nifty_store/commit/cc36a8d36eccbf102c981791cb36282bb280c839 which is 40 chars-->
+    </div>
   </body>
 </html>
