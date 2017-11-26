@@ -8,6 +8,9 @@ build:
 run: build
 	script/server
 
+run-prod: build
+	RAILS_ENV=production script/server
+
 tests:
 	@echo "1. See Application-wise config version which shjould match ./VERSION"
 	echo Configuration.app_version | script/console
