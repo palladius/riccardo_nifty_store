@@ -18,3 +18,7 @@ build-docker:
 # run on port 3001 in env:dev
 run-docker-local: build-docker
 		docker run -it -p 0.0.0.0:3001:3000 $(APPNAME) script/server
+
+db-prep-prod:
+	RAILS_ENV=production rake db:create
+	RAILS_ENV=production rake db:setup
