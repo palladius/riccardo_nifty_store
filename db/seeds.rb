@@ -8,7 +8,7 @@
 
 SEED_VER = '0.9a'
 
-ROLES = %w{ 
+MY_ROLES = %w{ 
  root
  admin           
  user            
@@ -16,6 +16,11 @@ ROLES = %w{
  editor       
 }   
   
-ROLES.each{|role|
+# Roles
+MY_ROLES.each{ |role|
   Role.create(:name => role , :notes => "Introduced by rake db:seed (v.#{SEED_VER})", :tags => 'role' )
 }
+
+# USERS
+User.create(:username => "riccardo", :email => "rusko@palladius.it", :goliardic_name => "palladius", :about_you => "io sono Riccardo e se volete sapere di piu cliccate...", :password => 'prova42').save
+User.create(:username => "fabio", :email => "burattino@gmail.com", :goliardic_name => "venerdi", :about_you =>  "Fabiolone e' un programmatore di indubbia fama che ...", :password => 'fabiolone353').save
