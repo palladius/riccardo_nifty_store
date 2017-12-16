@@ -17,36 +17,37 @@ first time:
 - http://guides.rubyonrails.org/v2.3.11/association_basics.html
 - Creating UserRoleAcl object with NiftyGenerators: https://github.com/ryanb/nifty-generators
 
-    rails g nifty:scaffold UserRoleAcl user_id:User role_id:Role creator_id:User description:string 
+    rails g nifty:scaffold UserRoleAcl user_id:User role_id:Role creator_id:User description:string
 
-BUGS
-
-(SOLVED) Bug in insert of posts.
-
-= SAMPLE TABLE =
+# SAMPLE TABLE
 
 USERS:
-  1: root
-  2: rcarlesso
-  3: fmattei
-  4: zwingli
+
+    1: root
+    2: rcarlesso
+    3: fmattei
+    4: zwingli
+
 ACLS:
-  na: 1 1
-  na: 2 2
-  na: 3 2
-  na: 4 4
+
+    na: 1 1
+    na: 2 2
+    na: 3 2
+    na: 4 4
+
 ROLES:
-  1: root
-  2: admin
-  3: god
-  4: user
-  5: write_posts
-  6: review_articles
-  7: publisher
-  8: editor
-  9: write_others_posts
 
-= Credits
+    1: root
+    2: admin
+    3: god
+    4: user
+    5: write_posts
+    6: review_articles
+    7: publisher
+    8: editor
+    9: write_others_posts
 
- Author: Riccardo Carlesso
- Nifty stuff: thanks to Ryan Bates and DHH to make this fun possible!
+# Credits
+
+Author: Riccardo Carlesso
+Nifty stuff: thanks to Ryan Bates and DHH to make this fun possible!
