@@ -1,32 +1,38 @@
 # SYNOPSIS
 
-This is a Goldy version of RoR 2.3.5 from Riccardo Carlesso
-Per ora lo tengo nel mio Dropbox, come proof of concept.
-In futuro si vedra'!
+[![Build Status](https://travis-ci.org/palladius/riccardo_nifty_store.svg?branch=master)](https://travis-ci.org/palladius/riccardo_nifty_store)
+[![Code Climate](https://codeclimate.com/github/palladius/riccardo_nifty_store.png)](https://codeclimate.com/github/palladius/riccardo_nifty_store)
+
+This is a Goldy version of RoR 2.3.5 from Riccardo Carlesso.
 
 # INSTALL
 
-first time:
+First time:
 
- git clone git@github.com:palladius/riccardo_nifty_store.git
- rake db:migrate
+    git clone git@github.com:palladius/riccardo_nifty_store.git
+    rake db:migrate
 
 # TODO
 
-- metti ACL con utenti , capabilities e tabella mediana di merge.
-- http://guides.rubyonrails.org/v2.3.11/association_basics.html
-- Creating UserRoleAcl object with NiftyGenerators: https://github.com/ryanb/nifty-generators
+*    Put ACLs with users, capabilities and middle merge table
+*    http://guides.rubyonrails.org/v2.3.11/association_basics.html
+*    Creating UserRoleAcl object with NiftyGenerators: https://github.com/ryanb/nifty-generators
 
-    rails g nifty:scaffold UserRoleAcl user_id:User role_id:Role creator_id:User description:string
+     $ rails g nifty:scaffold UserRoleAcl user_id:User role_id:Role creator_id:User description:string
 
-# SAMPLE TABLE
+*    Add `acts_as_votable`: https://github.com/ryanto/acts_as_votable/blob/master/README.markdown
+
+## SAMPLE TABLE
+
+This explain what I mean in the above TODO :)
+ACLS table would be the middle ground.
 
 USERS:
 
     1: root
     2: rcarlesso
     3: fmattei
-    4: zwingli
+    4: zwingli // Zwingli41 # test
 
 ACLS:
 
@@ -50,4 +56,5 @@ ROLES:
 # Credits
 
 Author: Riccardo Carlesso
+
 Nifty stuff: thanks to Ryan Bates and DHH to make this fun possible!
