@@ -25,4 +25,5 @@ build-docker:
 
 # run on port 3001 in env:dev
 run-docker-local: build-docker
-		docker run -it -p 0.0.0.0:3001:3000 $(APPNAME) script/server
+	@echo "Running locally on http://localhost:3001/ .."
+	docker run -it -p 0.0.0.0:3001:3000 $(APPNAME) script/server
