@@ -1,5 +1,12 @@
 
+source 'https://rubygems.org'
 
-gem 'rails', '2.3.18'
 ruby "1.8.7"
 
+gem 'rails', '2.3.18'
+#gem 'activerecord-mysql2-adapter'
+#gem 'mysql2' # , '< 0.3'
+
+# for Rails 2.x:
+#gem 'mysql2', '~> 0.2.11'
+#gem 'activerecord-mysql2-adapter'

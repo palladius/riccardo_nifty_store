@@ -1,8 +1,9 @@
 
 VERSION = $(shell cat VERSION)
 APPNAME = ricniftystore
+ENVIRONMENT = development
 
-build:
+build-local:
 	bundle install
 
 run: build
@@ -17,7 +18,7 @@ tests:
 	@echo "2. See users in the dev DB"
 	echo 'User.all.map{|x| x.name}' | script/console
 	@echo "3. See users in the prod DB"
-	echo 'User.all.map{|x| x.name}' | RAILS_ENV=production script/console
+	echo 'User.all.map{|x| x.name}' | RAILS_ENV=$(ENVIRONMENT) script/console
    
 
 build-docker:
@@ -26,4 +27,7 @@ build-docker:
 # run on port 3001 in env:dev
 run-docker-local: build-docker
 	@echo "Running locally on http://localhost:3001/ .."
-	docker run -it -p 0.0.0.0:3001:3000 $(APPNAME) script/server
+	docker run -it -p 0.0.0.0:3001:3000 $(APPNAME) RAILS_ENV=development script/server
+
+run-docker-rake-tests:
+	docker run -it -p 0.0.0.0:3001:3000 $(APPNAME) rake test
