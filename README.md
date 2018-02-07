@@ -53,6 +53,21 @@ ROLES:
     8: editor
     9: write_others_posts
 
+# Bugs
+
+1. Mysql doesnt wanna go :/
+
+    uninitialized constant Mysql2::Client::SECURE_CONNECTION (NameError)
+
+https://github.com/brianmario/mysql2/issues/603
+
+Testing locally:
+
+    # removing all installations first...
+    yes | gem uninstall mysql2 
+    gem install mysql2 -v 0.3.18 -- --with-mysql-lib=/usr/lib/mysql
+
+
 # Credits
 
 Author: Riccardo Carlesso

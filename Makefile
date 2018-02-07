@@ -6,10 +6,10 @@ ENVIRONMENT = development
 build-local:
 	bundle install
 
-run: build
+run-local: build
 	script/server
 
-run-prod: build
+run-local-prod: build
 	RAILS_ENV=production script/server
 
 tests:
@@ -28,6 +28,9 @@ build-docker:
 run-docker-local: build-docker
 	@echo "Running locally on http://localhost:3001/ .."
 	docker run -it -p 0.0.0.0:3001:3000 $(APPNAME) RAILS_ENV=development script/server
+run-docker-prod: build-docker
+	@echo "Running locally on http://localhost:3001/ .."
+	docker run -it -p 0.0.0.0:3001:3000 $(APPNAME) bash run-prod.sh
 
 run-docker-rake-tests:
 	docker run -it -p 0.0.0.0:3001:3000 $(APPNAME) rake test
