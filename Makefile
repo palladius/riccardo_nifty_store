@@ -3,6 +3,11 @@ VERSION = $(shell cat VERSION)
 APPNAME = ricniftystore
 ENVIRONMENT = development
 
+install:
+	echo Beware this code is VERY old.
+	rbenv install 1.8.7
+	bundle install
+
 build-local:
 	bundle install
 
@@ -19,8 +24,8 @@ tests:
 	echo 'User.all.map{|x| x.name}' | script/console
 	@echo "3. See users in the prod DB"
 	echo 'User.all.map{|x| x.name}' | RAILS_ENV=$(ENVIRONMENT) script/console
-   
 
+docker-build: build-docker
 build-docker:
 	docker build -t $(APPNAME) .
 
