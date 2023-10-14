@@ -32,7 +32,6 @@ USERS:
     1: root
     2: rcarlesso
     3: fmattei
-    4: zwingli // Zwingli41 # test
 
 ACLS:
 
